@@ -570,6 +570,16 @@ interface ITelephony {
     IccOpenLogicalChannelResponse iccOpenLogicalChannel(int subId, String AID);
 
     /**
+     * Opens a logical channel to the ICC card for a particular subID
+     *
+     * @param subId user preferred subId.
+     * @param p2 P2 parameter
+     * @param AID Application id. See ETSI 102.221 and 101.220
+     */
+    IccOpenLogicalChannelResponse iccOpenLogicalChannelWithP2(int subId,
+        String AID, byte p2);
+
+    /**
      * Closes a previously opened logical channel to the ICC card.
      *
      * Input parameters equivalent to TS 27.007 AT+CCHC command.
@@ -1105,7 +1115,7 @@ interface ITelephony {
     List<String> getPackagesWithCarrierPrivileges();
 
     /**
-     * Return the application ID for the app type.
+s     * Return the application ID for the app type.
      *
      * @param subId the subscription ID that this request applies to.
      * @param appType the uicc app type,
@@ -1194,4 +1204,10 @@ interface ITelephony {
      * @hide
      */
     void setPolicyDataEnabled(boolean enabled, int subId);
+
+    /**
+     * Get ATR (Answer To Reset; as per ISO/IEC 7816-4) from SIM card
+     * for a particular subId.
+     */
+    byte[] getAtr(int subId);
 }
