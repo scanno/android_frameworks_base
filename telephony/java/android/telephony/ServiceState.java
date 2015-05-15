@@ -172,6 +172,12 @@ public class ServiceState implements Parcelable {
                     | (1 << (RIL_RADIO_TECHNOLOGY_EHRPD - 1));
 
     /**
+     * LTE_CA
+     * @hide
+     */
+    public static final int RIL_RADIO_TECHNOLOGY_LTE_CA = 19;
+
+    /**
      * Available registration states for GSM, UMTS and CDMA.
      */
     /** @hide */
