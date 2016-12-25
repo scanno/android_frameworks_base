@@ -690,7 +690,7 @@ public class ServiceState implements Parcelable {
                         s.mCdmaDefaultRoamingIndicator)
                 && mIsEmergencyOnly == s.mIsEmergencyOnly
                 && mIsDataRoamingFromRegistration == s.mIsDataRoamingFromRegistration
-                && mIsUsingCarrierAggregation == s.mIsUsingCarrierAggregation);
+                && mIsUsingCarrierAggregation == s.mIsUsingCarrierAggregation
                 && mRilImsRadioTechnology == s.mRilImsRadioTechnology);
     }
 
@@ -800,7 +800,7 @@ public class ServiceState implements Parcelable {
                 + " DefRoamInd=" + mCdmaDefaultRoamingIndicator
                 + " EmergOnly=" + mIsEmergencyOnly
                 + " IsDataRoamingFromRegistration=" + mIsDataRoamingFromRegistration
-                + " IsUsingCarrierAggregation=" + mIsUsingCarrierAggregation)
+                + " IsUsingCarrierAggregation=" + mIsUsingCarrierAggregation
                 + " mRilImsRadioTechnology=" + mRilImsRadioTechnology);
     }
 
